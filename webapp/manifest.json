@@ -17,7 +17,17 @@
 				"uri": "/NorthwindV2/V2/Northwind/Northwind.svc/",
 				"type": "OData",
 				"settings": {
-					"localUri": "localService/metadata.xml"
+					"localUri": "localService/metadata.xml",
+					"annotations": [
+						"annotation"
+					]
+				}
+			},
+			"annotation": {
+				"type": "ODataAnnotation",
+				"uri": "annotation.xml",
+				"settings": {
+					"localUri": "annotation.xml"
 				}
 			}
 		},
