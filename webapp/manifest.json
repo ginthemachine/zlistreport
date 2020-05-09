@@ -133,32 +133,10 @@
 					"list": true,
 					"settings": {
 						"condensedTableLayout": true,
-						"smartVariantManagement": false
-					}
-				},
-				"pages": {
-					"ObjectPage|Orders": {
-						"entitySet": "Orders",
-						"component": {
-							"name": "sap.suite.ui.generic.template.ObjectPage"
-						},
-						"pages": {
-							"ObjectPage|Order_Details": {
-								"navigationProperty": "Order_Details",
-								"entitySet": "Order_Details",
-								"component": {
-									"name": "sap.suite.ui.generic.template.ObjectPage"
-								},
-								"pages": {
-									"ObjectPage|Product": {
-										"navigationProperty": "Product",
-										"entitySet": "Products",
-										"component": {
-											"name": "sap.suite.ui.generic.template.ObjectPage"
-										}
-									}
-								}
-							}
+						"smartVariantManagement": true,
+						"variantManagementHidden": true,
+						"tableSettings": {
+							"type": "GridTable"
 						}
 					}
 				}

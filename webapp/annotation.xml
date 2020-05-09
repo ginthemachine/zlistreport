@@ -5,9 +5,18 @@
 	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
 		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
 	</edmx:Reference>
+	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
+		<edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+	</edmx:Reference>
 	<edmx:DataServices>
 		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zlistreport.annotation.NorthwindModel">
 			<Annotations Target="Metadata.Order">
+				<Annotation Term="UI.HeaderInfo">
+					<Record Type="UI.HeaderInfoType">
+						<PropertyValue Property="TypeName" String="{@i18n&gt;ORDER}"/>
+						<PropertyValue Property="TypeNamePlural" String="{@i18n&gt;ORDERS}"/>
+					</Record>
+				</Annotation>
 				<Annotation Term="UI.LineItem">
 					<Collection>
 						<Record Type="UI.DataField">
@@ -32,6 +41,13 @@
 							<PropertyValue Property="Value" Path="ShipName"/>
 						</Record>
 					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="ODataWeb.Northwind.Model.NorthwindEntities/Orders">
+				<Annotation Term="Capabilities.DeleteRestrictions">
+					<Record Type="Capabilities.DeleteRestrictionsType">
+						<PropertyValue Property="Deletable" Bool="false"/>
+					</Record>
 				</Annotation>
 			</Annotations>
 		</Schema>
